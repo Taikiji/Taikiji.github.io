@@ -16,14 +16,17 @@ $(function() {
 
 
 $(document).ready(function(){
-  $("#logo").fadeIn(500);
+  $("#logo").fadeIn(1000);
   $(".claim") .fadeIn(4000);
   $(".everything").fadeIn(4000, "swing");
 });
 
 
-$('#navbar').scrollspy()
+setTimeout(function() {
+$('#skills').scrollspy();
 
 $(document).ready(function(){
     $('body').scrollspy({target: ".navbar"});
 });
+
+}, 1000);
