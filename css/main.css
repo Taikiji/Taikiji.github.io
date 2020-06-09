@@ -20,7 +20,7 @@ body {
     font-family: "montserrat", sans-serif;
 }
 
-nav {
+.navbar {
     background: #090909;
     border-bottom: 5px solid #64E330;
     opacity: 1;
@@ -93,9 +93,43 @@ nav h1 a:hover {
 }
 
 .claim {
-  margin-bottom: 150px;
+  margin-bottom: 0px;
   font-weight: bold;
-  display: none;
+  opacity: 0;
+}
+
+.scrolls {
+  opacity: 0;
+}
+.arrow-down {
+  margin: 0 auto;
+  position: absolute;
+  bottom: 100px;
+}
+
+.arrow-down::after {
+  -webkit-transform: rotate(45deg);
+   transform: rotate(45deg);
+   -webkit-animation: 3s arrow infinite ease;
+   animation: 3s arrow infinite ease;
+}
+
+@-webkit-keyframes arrow {
+  0%, 100% {
+    top: 50px;
+  }
+  50% {
+    top: 80px;
+  }
+}
+
+@keyframes arrow {
+  0%, 100% {
+    top: 50px;
+  }
+  50% {
+    top: 80px;
+  }
 }
 
 a.card-title {
@@ -129,7 +163,8 @@ img {
 }
 
 .everything {
-  display: none;
+  margin-top: 150px;
+  opacity: 0;
 }
 
 .name {
@@ -167,6 +202,9 @@ img {
 }
 
 @media all and (min-width: 992px) {
+  .scroll2 {
+    display: none !important;
+  }
   nav h1 a{
     font-size: 36px;
   }
@@ -212,6 +250,9 @@ img {
 }
 
 @media all and (max-width: 991px) and (min-width: 50px) {
+  .scroll1 {
+    display: none !important;
+  }
   nav h1 a{
     font-size:4vw;
   }

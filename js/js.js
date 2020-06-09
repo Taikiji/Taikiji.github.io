@@ -14,19 +14,40 @@ $(function() {
 
 });
 
+$(function() {
+  var documentEl = $(document), fadeElem = $(".scrolls");
 
-$(document).ready(function(){
-  $("#logo").fadeIn(1000);
-  $(".claim") .fadeIn(4000);
-  $(".everything").fadeIn(4000, "swing");
+  documentEl.on('scroll', function() {
+    var currScrollPos = documentEl.scrollTop();
+
+    fadeElem.each(function() {
+    var $this = $(this),
+      elemOffsetTop = $(".logo").offset().top;
+      $this.css("opacity", 1 - (currScrollPos-elemOffsetTop)/300);
+    });
+
+  });
+
 });
 
 
-setTimeout(function() {
+$(document).ready(function(){
+  $("#logo").fadeTo(1000, 1);
+  $(".everything").fadeTo(3000, 1);
+
+  setTimeout (function(){
+    $(".claim") .fadeTo(3000, 1);
+  }, 1000)
+
+  setTimeout (function(){
+    $(".scrolls").fadeTo(2000, 1);
+  }, 4000)
+
+});
+
+
 $('#skills').scrollspy();
 
 $(document).ready(function(){
     $('body').scrollspy({target: ".navbar"});
 });
-
-}, 1000);
