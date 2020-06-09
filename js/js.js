@@ -46,7 +46,7 @@ $(document).ready(function(){
 });
 
 
-$('#skills').scrollspy();
+$('.everything').scrollspy();
 
 $(document).ready(function(){
     $('body').scrollspy({target: ".navbar"});
