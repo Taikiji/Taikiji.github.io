@@ -9,8 +9,17 @@ $(function() {
       elemOffsetTop = $(".logo").offset().top;
       $this.css("opacity", 0 + (currScrollPos-elemOffsetTop)/100);
     });
-
   });
+
+  var currScrollPos = documentEl.scrollTop();
+
+  setTimeout (function(){
+    fadeElem.each(function() {
+    var $this = $(this),
+      elemOffsetTop = $(".logo").offset().top;
+      $this.css("opacity", 0 + (currScrollPos-elemOffsetTop)/100);
+    });
+  }, 1)
 
 });
 
@@ -33,7 +42,7 @@ $(function() {
 
 $(document).ready(function(){
   $("#logo").fadeTo(1000, 1);
-  $(".everything").fadeTo(3000, 1);
+  $(".everything").fadeTo(1000, 1);
 
   setTimeout (function(){
     $(".claim") .fadeTo(3000, 1);

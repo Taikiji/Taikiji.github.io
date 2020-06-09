@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $(".everything").fadeIn(4000, "swing");
+  $(".everything").fadeTo(1000, 1);
 });
 
 $('.carousel').carousel()
