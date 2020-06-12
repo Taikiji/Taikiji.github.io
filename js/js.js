@@ -59,8 +59,8 @@ $(function() {
 });
 
 
-$('.everything').scrollspy();
+//$('.everything').scrollspy();
 
 $(document).ready(function(){
-    $('body').scrollspy({target: ".navbar"});
+    //$('body').scrollspy({target: ".navbar"});
 });
