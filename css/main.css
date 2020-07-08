@@ -331,3 +331,7 @@ input[type=submit]:hover {
   width: 100%; /* Full width */
   padding: 20px; /* Some padding */
 }
+
+video:focus  {
+    outline: none;
+}
