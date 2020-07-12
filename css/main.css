@@ -335,3 +335,13 @@ input[type=submit]:hover {
 video:focus  {
     outline: none;
 }
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+.btn-primary:hover {
+    background-color: #64E330;
+    border-color: #45a049;
+}
